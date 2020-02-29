@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
   searchbox: {
     fontSize: 20,
     fontWeight: "300",
-    padding: 30,
+    padding: 10,
     width: "100%",
     backgroundColor: "#fff",
     borderRadius: 8,
