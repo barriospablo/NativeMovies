@@ -83,10 +83,6 @@ export default function HomeScreen({ navigation }) {
           </TouchableHighlight>
         ))}
       </ScrollView>
-      {/* <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate('Details')}
-      /> */}
 
       {/* <Modal
         animationType="fade"
