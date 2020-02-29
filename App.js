@@ -7,6 +7,7 @@ import Home from "./screens/Home";
 import List from "./screens/List";
 import DetailMovie from "./screens/DetailMovie";
 import ProfileScreen from "./screens/Profile";
+import { MaterialCommunityIcons } from "react-native-vector-icons";
 
 const Tab = createBottomTabNavigator();
 const SettingsStack = createStackNavigator();
@@ -16,7 +17,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home">
+        <Tab.Screen
+          name="Home"
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons name="home" color={color} size={size} />
+            )
+          }}
+        >
           {() => (
             <SettingsStack.Navigator>
               <SettingsStack.Screen name="Home" component={Home} />
@@ -24,7 +32,18 @@ export default function App() {
             </SettingsStack.Navigator>
           )}
         </Tab.Screen>
-        <Tab.Screen name="Search">
+        <Tab.Screen
+          name="Search"
+          options={{
+            tabBarIcon: ({ color, size }) => (
+              <MaterialCommunityIcons
+                name="magnify"
+                color={color}
+                size={size}
+              />
+            )
+          }}
+        >
           {() => (
             <HomeStack.Navigator>
               <HomeStack.Screen name="Home Movies" component={List} />
