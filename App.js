@@ -16,7 +16,7 @@ const HomeStack = createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator tabBarOptions={{ activeTintColor: "red" }}>
         <Tab.Screen
           name="Home"
           options={{
